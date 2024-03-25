@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+</head>
+<body>
+    <h1>Schedule</h1>
+    <table border="1">
+        <tr>
+            <th>Lesson</th>
+            <th>Teacher</th>
+            <th>Time</th>
+        </tr>
+        <th:block th:each="lesson : ${lessons}">
+            <tr>
+                <td th:text="${lesson.name}"></td>
+                <td th:text="${lesson.teacher}"></td>
+                <td th:text="${lesson.time}"></td>
+            </tr>
+        </th:block>
+    </table>
+</body>
+</html>
